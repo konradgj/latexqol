@@ -1,0 +1,4 @@
+# Folders to ignore
+build/
+dist/
+latexqol.egg-info/
