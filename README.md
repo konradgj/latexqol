@@ -5,7 +5,8 @@ Under construction. Currently only 1 function.
 ## Example use
 
 To copy a simple Latex formated table from a list of data arrays to you clipboard
-'''Python
+
+'''python
 from latexqol import copy_table
 
 headers = ["header1", "header2", "header3"]
