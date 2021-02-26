@@ -1,6 +1,6 @@
 import pyperclip
 
-def copy_table(headers, *args):
+def copy_table2(headers, *args):
     '''
     Creates a formated table based on headers and collumns
     :param headers : array
@@ -11,12 +11,6 @@ def copy_table(headers, *args):
 
     num_cols = 'c' * len(headers)
     collumns = args
-    row_range = range(len(headers))
-    col_range = range(len(collumns[0]))
-
-    # Rearange 2D array of collumns
-    collumns = [[collumns[row][item] for row in row_range] for item in col_range]
-    print(collumns)
 
     # Initialize table
     table = "\\begin{table}[!htbp]\n"
@@ -29,12 +23,12 @@ def copy_table(headers, *args):
     table += "\t\t\hline\n"
 
     # Add collumns
-    for col in col_range:
-        table += f"\t\t{collumns[0][col]} "
-        for row in range(1, len(collumns[0])):
-            table += f"& {collumns[row][col]} "
+    for row in range(len(collumns[0])):
+        table += f"\t\t{collumns[0][row]} "
+        for col in range(1, len(collumns)):
+            table += f"& {collumns[col][row]} "
         table += "\\\\\n"
-    table += "\t\t\hline\n"
+    table += "\t\t\hline\n" 
 
     # End table
     table += "\t\end{tabular}\n"
@@ -42,5 +36,5 @@ def copy_table(headers, *args):
     table += "\t\label{tab:label}\n"
     table += "\end{table}"
 
-    print(table)
     pyperclip.copy(table)
+    print("Table successfully copied to clipboard.")
