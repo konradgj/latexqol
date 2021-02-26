@@ -3,5 +3,6 @@ build/
 dist/
 latexqol.egg-info/
 .vscode/
+latexqol.__pycache__/
 
 test.py
