@@ -1,29 +1,25 @@
-from setuptools import setup, find_packages
-import codecs
-import os
+import setuptools
 
-VERSION = '0.0.1'
-DESCRIPTION = 'Features to make transfering data into LaTeX documents easier'
-LONG_DESCRIPTION = 'A module that can create simple tables from arrays of data.'
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-# Setting up
-setup(
+setuptools.setup(
     name="latexqol",
-    version=VERSION,
-    author="konradg",
+    version="0.0.2",
+    author="Konrad",
     author_email="",
-    description=DESCRIPTION,
+    description="A module for moving data into LaTeX formated text.",
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
-    packages=find_packages(),
-    install_requires=['pyperclip'],
-    keywords=['python', 'LateX'],
+    url="https://github.com/konradgj/latexqol",
+    # project_urls={
+    #     "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
+    # },
     classifiers=[
-        "Development Status :: 1 - Planning",
-        "Intended Audience :: Science/Research ",
-        "Programming Language :: Python :: 3.6",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ]
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    packages=setuptools.find_packages(),
+    python_requires=">=3.6",
 )

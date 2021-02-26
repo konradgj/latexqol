@@ -1,5 +1,6 @@
 # latexqol
 
+A module for moving data into LaTeX formated text.
 Under construction. Currently only 1 function.
 
 ## Example use
