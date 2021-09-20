@@ -1,6 +1,6 @@
 import pyperclip
 
-def copy_table2(headers, *args):
+def copy_table(headers, *args):
     '''
     Creates a formated table based on headers and collumns
     :param headers : array

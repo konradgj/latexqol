@@ -1,8 +1,6 @@
 # Folders to ignore
 build/
-dist/
 latexqol.egg-info/
 .vscode/
-latexqol.__pycache__/
-
-test.py
+__pycache__
+env
